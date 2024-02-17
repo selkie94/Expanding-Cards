@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Alegreya Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    flex:0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active{
+    flex:6;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media(max-width: 500px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),.panel:nth-of-type(5),.panel:nth-of-type(6) {
+        display: none;
+    }
+}
+/* Card Images */
+
+.card1 {
+    background-image: url(images/Luna.jpg)
+}
+
+.card2 {
+    background-image: url(images/Phoebe.jpg)
+}
+
+.card3 {
+    background-image: url(images/Poppy.jpg)
+}
+
+.card4 {
+    background-image: url(images/Luna_2.jpg)
+}
+
+.card5 {
+    background-image: url(images/Phoebe_2.jpg)
+}
+
+.card6 {
+    background-image: url(images/Poppy_2.jpg);
+}
